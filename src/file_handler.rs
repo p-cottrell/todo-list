@@ -49,3 +49,8 @@ pub fn save_task(task: &[Task]) -> DynResult {
 
     Ok(())
 }
+
+/// Load the welcome message from a text file.
+pub fn load_welcome_message() -> Result<String, io::Error> {
+    fs::read_to_string("src/welcome.txt")
+}
