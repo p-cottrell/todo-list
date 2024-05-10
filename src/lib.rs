@@ -16,7 +16,9 @@ use tui::{
 };
 
 pub type DynResult = Result<(), Box<dyn Error>>;
+
 pub type CrossTerminal = Terminal<CrosstermBackend<Stdout>>;
+
 pub type TerminalFrame<'a> = Frame<'a, CrosstermBackend<Stdout>>;
 
 /// Represents a single task in the task list.

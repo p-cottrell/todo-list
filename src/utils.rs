@@ -57,7 +57,7 @@ pub fn save_task(app: &mut App) {
 }
 
 /// Exits the adding mode and sets the input mode back to `Normal`. Selects the first task if there is one.
-pub fn exit_adding(app: &mut App) {
+pub fn exit_adding_mode(app: &mut App) {
     app.input_mode = InputMode::Normal;
     app.selected_task = Some(0);
 }

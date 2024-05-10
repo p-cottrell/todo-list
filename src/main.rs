@@ -15,7 +15,7 @@ use todo_list::{
 
 fn main() -> DynResult {
     // Initialize the terminal for UI display, enable raw mode, and switch to alternate screen.
-    let mut terminal = initialize_terminal()?;
+    let mut terminal = initialise_terminal()?;
 
     // Load task data and configuration from files.
     let task = load_task()?;
@@ -34,8 +34,8 @@ fn main() -> DynResult {
     Ok(())
 }
 
-/// Initializes and returns a terminal object configured with raw mode and alternate screen.
-fn initialize_terminal() -> Result<CrossTerminal, Box<dyn Error>> {
+/// Initialises and returns a terminal object
+fn initialise_terminal() -> Result<CrossTerminal, Box<dyn Error>> {
     enable_raw_mode()?;
     let mut stdout = stdout();
     execute!(stdout, EnterAlternateScreen)?;

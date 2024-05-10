@@ -39,8 +39,8 @@ fn handle_adding_events(app: &mut App, keycode: KeyCode) {
 
     if keycode == keybindings.save_task && !app.input.trim().is_empty() {
         utils::save_task(app);
-    } else if keycode == keybindings.exit_adding {
-        utils::exit_adding(app);
+    } else if keycode == keybindings.exit_adding_mode {
+        utils::exit_adding_mode(app);
     } else if let KeyCode::Char(c) = keycode {
         utils::input_add_char(app, c);
     } else if let KeyCode::Backspace = keycode {

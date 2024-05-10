@@ -95,7 +95,7 @@ pub fn task_input(app: &App) -> Paragraph {
     let input = Paragraph::new(app.input.as_ref()).style(style).block(
         Block::default()
             .borders(Borders::ALL)
-            .title("New task")
+            .title("Add task")
             .border_type(BorderType::Rounded)
             .style(style),
     );
@@ -120,7 +120,7 @@ pub fn navigation_hint(app: &App) -> Paragraph {
                     keycode_to_string(keybindings.new_task),
                     app.default_style().add_modifier(Modifier::BOLD),
                 ),
-                Span::styled(" new task | ", app.default_style()),
+                Span::styled(" add task | ", app.default_style()),
                 Span::styled(
                     keycode_to_string(keybindings.check_and_uncheck_task),
                     app.default_style().add_modifier(Modifier::BOLD),
@@ -147,7 +147,7 @@ pub fn navigation_hint(app: &App) -> Paragraph {
             // Keyboard shortcuts for adding mode
             vec![
                 Span::styled(
-                    keycode_to_string(keybindings.exit_adding),
+                    keycode_to_string(keybindings.exit_adding_mode),
                     app.default_style().add_modifier(Modifier::BOLD),
                 ),
                 Span::styled(" stop adding | ", app.default_style()),

@@ -368,7 +368,6 @@ version = "0.1.0"
 dependencies = [
  "crossterm 0.19.0",
  "directories-next",
- "lazy_static",
  "serde",
  "serde_json",
  "tui",
